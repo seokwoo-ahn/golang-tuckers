@@ -1,3 +1,3 @@
-module golang-tuckers/hello
+module golang-tuckers
 
 go 1.18
