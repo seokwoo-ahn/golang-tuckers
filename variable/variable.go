@@ -21,4 +21,7 @@ func main() {
 	//scope test
 	fmt.Println("scope test")
 	libs.Scope()
+	//float error test
+	fmt.Println("float error test")
+	libs.Floaterror()
 }
