@@ -15,4 +15,7 @@ func main() {
 	//type test
 	fmt.Println("type test")
 	libs.Type()
+	//int overflow test
+	fmt.Println("int overflow test")
+	libs.Overflow()
 }
