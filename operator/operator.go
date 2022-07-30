@@ -18,4 +18,7 @@ func main() {
 	// int overflow test
 	fmt.Println("int overflow test")
 	libs.IntOverFlow()
+	// float test
+	fmt.Println("float test")
+	libs.Float()
 }
