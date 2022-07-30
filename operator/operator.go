@@ -21,4 +21,7 @@ func main() {
 	// float test
 	fmt.Println("float test")
 	libs.Float()
+	// disregard for error
+	fmt.Println("ignore error test")
+	libs.Ignore()
 }
