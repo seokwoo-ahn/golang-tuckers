@@ -12,4 +12,7 @@ func main() {
 	//declaration test
 	fmt.Println("declaration test")
 	libs.Declaration()
+	//type test
+	fmt.Println("type test")
+	libs.Type()
 }
