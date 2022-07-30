@@ -18,4 +18,7 @@ func main() {
 	//int overflow test
 	fmt.Println("int overflow test")
 	libs.Overflow()
+	//scope test
+	fmt.Println("scope test")
+	libs.Scope()
 }
