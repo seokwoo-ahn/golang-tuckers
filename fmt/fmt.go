@@ -12,4 +12,7 @@ func main() {
 	// width test
 	fmt.Println("print width test")
 	libs.PrintWidth()
+	// special symbols test
+	fmt.Println("special sysmbols test")
+	libs.SpecialSymbols()
 }
