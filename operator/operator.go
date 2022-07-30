@@ -15,4 +15,7 @@ func main() {
 	// shift operator test
 	fmt.Println("shift operator test")
 	libs.Shift()
+	// int overflow test
+	fmt.Println("int overflow test")
+	libs.IntOverFlow()
 }
