@@ -9,4 +9,7 @@ func main() {
 	// arithmetic operation test
 	fmt.Println("arithmetic operation test")
 	libs.Arithmetic()
+	// bit operator test
+	fmt.Println("bit operator test")
+	libs.Bit()
 }
