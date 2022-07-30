@@ -24,4 +24,7 @@ func main() {
 	// disregard for error
 	fmt.Println("ignore error test")
 	libs.Ignore()
+	// ignore error with NextAfter
+	fmt.Println("NextAfter method test")
+	libs.IgnoreBit()
 }
