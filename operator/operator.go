@@ -27,4 +27,7 @@ func main() {
 	// ignore error with NextAfter
 	fmt.Println("NextAfter method test")
 	libs.IgnoreBit()
+	// use math/big method
+	fmt.Println("math/big method test")
+	libs.MathBig()
 }
