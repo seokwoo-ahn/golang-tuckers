@@ -15,4 +15,7 @@ func main() {
 	// special symbols test
 	fmt.Println("special sysmbols test")
 	libs.SpecialSymbols()
+	// scan test
+	fmt.Println("scan test")
+	libs.Scan()
 }
