@@ -12,4 +12,7 @@ func main() {
 	// bit operator test
 	fmt.Println("bit operator test")
 	libs.Bit()
+	// shift operator test
+	fmt.Println("shift operator test")
+	libs.Shift()
 }
