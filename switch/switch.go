@@ -12,4 +12,7 @@ func main() {
 	// switch iota
 	fmt.Println("switch iota")
 	libs.FavoriteColor(0)
+	// fallthrough
+	fmt.Println("fall through (not recommend)")
+	libs.FallThrough(1)
 }
