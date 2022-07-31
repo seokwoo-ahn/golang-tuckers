@@ -12,4 +12,7 @@ func main() {
 	// short circuit
 	fmt.Println("short circuit")
 	libs.ShortCircuit()
+	// initial sentence
+	fmt.Println("initial sentence")
+	libs.InitialSentence()
 }
