@@ -9,4 +9,7 @@ func main() {
 	// struct declaration
 	fmt.Println("struct declaration")
 	libs.Declaration()
+	// embedded struct
+	fmt.Println("embedded struct")
+	libs.Embedded()
 }
