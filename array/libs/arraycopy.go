@@ -9,6 +9,7 @@ func ArrayCopy() {
 	a = b
 
 	for _, v := range a {
-		fmt.Println(v)
+		fmt.Print(v, " ")
 	}
+	fmt.Println()
 }

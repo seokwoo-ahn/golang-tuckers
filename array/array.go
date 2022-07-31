@@ -15,4 +15,7 @@ func main() {
 	// array copy
 	fmt.Println("array copy")
 	libs.ArrayCopy()
+	// two dimensional array
+	fmt.Println("two dimensional array")
+	libs.TwoDimArray()
 }
