@@ -17,4 +17,7 @@ func main() {
 	fmt.Println("max function")
 	max, result := libs.MultiReturn(2.44, 5.11)
 	fmt.Println(max, result)
+	// recursive call
+	fmt.Println("reculsive call")
+	libs.PrintNumSequence(5)
 }
