@@ -12,4 +12,7 @@ func main() {
 	// range
 	fmt.Println("array range")
 	libs.Range()
+	// array copy
+	fmt.Println("array copy")
+	libs.ArrayCopy()
 }
