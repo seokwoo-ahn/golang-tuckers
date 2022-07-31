@@ -9,4 +9,7 @@ func main() {
 	// continue & break
 	fmt.Println("continue & break")
 	libs.ContinueBreak()
+	// label
+	fmt.Println("label")
+	libs.Label()
 }
