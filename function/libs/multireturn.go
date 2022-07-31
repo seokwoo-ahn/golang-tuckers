@@ -2,9 +2,13 @@ package libs
 
 import "math"
 
-func MultiReturn(a, b float64) (float64, string) {
+func MultiReturn(a, b float64) (max float64, result string) {
 	if a == b {
-		return a, "same"
+		max = a
+		result = "same"
+		return
 	}
-	return math.Max(a, b), "max value"
+	max = math.Max(a, b)
+	result = "max value"
+	return
 }
