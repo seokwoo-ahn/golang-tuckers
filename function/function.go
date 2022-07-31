@@ -13,4 +13,8 @@ func main() {
 	// average function
 	fmt.Println("average function")
 	libs.Average("seok", 60, 70, 80)
+	// multi return (max value)
+	fmt.Println("max function")
+	max, result := libs.MultiReturn(2.44, 5.11)
+	fmt.Println(max, result)
 }
