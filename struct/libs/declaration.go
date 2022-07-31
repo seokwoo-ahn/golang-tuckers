@@ -10,11 +10,16 @@ type House struct {
 }
 
 func Declaration() {
-	var house House
-	house.Address = "광야"
-	house.Size = 500
-	house.Price = 16443
-	house.Type = "메타버스"
+	var house House = House{
+		"광야",
+		500,
+		16443,
+		"메타버스",
+	}
+	// house.Address = "광야"
+	// house.Size = 500
+	// house.Price = 16443
+	// house.Type = "메타버스"
 
 	fmt.Println("주소:", house.Address)
 	fmt.Printf("크기 %d평\n", house.Size)
