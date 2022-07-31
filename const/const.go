@@ -10,4 +10,7 @@ func main() {
 	fmt.Println("Constant property")
 	libs.Constant()
 	fmt.Println("Cannot assign & take address to constant")
+	// iota
+	fmt.Println("Iota")
+	libs.Iota()
 }
