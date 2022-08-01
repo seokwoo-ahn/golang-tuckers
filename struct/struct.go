@@ -12,4 +12,7 @@ func main() {
 	// embedded struct
 	fmt.Println("embedded struct")
 	libs.Embedded()
+	// struct copy
+	fmt.Println("struct copy")
+	libs.Copy()
 }
