@@ -12,4 +12,7 @@ func main() {
 	// pointer comparison
 	fmt.Println("pointer comparison")
 	libs.Comparison()
+	// meaning of pointer
+	fmt.Println("meaning of pointer")
+	libs.Meaning()
 }
