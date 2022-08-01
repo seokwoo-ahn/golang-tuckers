@@ -15,4 +15,7 @@ func main() {
 	// meaning of pointer
 	fmt.Println("meaning of pointer")
 	libs.Meaning()
+	// escape analysis
+	fmt.Println("escape analysis")
+	libs.EscapeAnalysis()
 }
