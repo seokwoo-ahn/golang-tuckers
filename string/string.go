@@ -24,4 +24,7 @@ func main() {
 	//	compare
 	fmt.Println("compare string")
 	fmt.Println(libs.Compare("berry", "berry"))
+	// duplication
+	fmt.Println("duplication not value but pointer")
+	libs.Duplication()
 }
