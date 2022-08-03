@@ -21,4 +21,7 @@ func main() {
 	// combine
 	fmt.Println("append string")
 	fmt.Println(libs.Combine("Cran", "Berry"))
+	//	compare
+	fmt.Println("compare string")
+	fmt.Println(libs.Compare("berry", "berry"))
 }
