@@ -18,4 +18,7 @@ func main() {
 	// range
 	fmt.Println("string range")
 	libs.Range("아이즈원")
+	// combine
+	fmt.Println("append string")
+	fmt.Println(libs.Combine("Cran", "Berry"))
 }
