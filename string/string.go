@@ -30,4 +30,7 @@ func main() {
 	// string change
 	fmt.Println("change string")
 	libs.Change()
+	// memory address compare
+	fmt.Println("string memory address")
+	libs.MemoryAddress()
 }
