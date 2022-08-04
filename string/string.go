@@ -27,4 +27,7 @@ func main() {
 	// duplication
 	fmt.Println("duplication not value but pointer")
 	libs.Duplication()
+	// string change
+	fmt.Println("change string")
+	libs.Change()
 }
