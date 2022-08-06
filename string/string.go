@@ -36,4 +36,7 @@ func main() {
 	// Add String
 	fmt.Println("append string")
 	libs.AddString()
+	// string builder
+	fmt.Println("append string with string builder")
+	fmt.Println(libs.StringBuilder("cran", "berry"))
 }
