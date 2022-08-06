@@ -33,4 +33,7 @@ func main() {
 	// memory address compare
 	fmt.Println("string memory address")
 	libs.MemoryAddress()
+	// Add String
+	fmt.Println("append string")
+	libs.AddString()
 }
