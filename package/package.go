@@ -12,4 +12,7 @@ func main() {
 	// alias
 	fmt.Println("alias template")
 	libs.Alias()
+	// unused package
+	fmt.Println("unused package")
+	fmt.Println(libs.Unused("cranberry"))
 }
