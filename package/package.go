@@ -15,4 +15,7 @@ func main() {
 	// unused package
 	fmt.Println("unused package")
 	fmt.Println(libs.Unused("cranberry"))
+	// external package
+	fmt.Println("external package")
+	libs.ExternalPkg()
 }
