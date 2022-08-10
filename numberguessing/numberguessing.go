@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	"golang-tuckers/numberguessing/libs"
 )
 
 func main() {
-	rand.Seed(time.Now().Unix())
+	var answer = libs.NumGen()
+	input, err := libs.Scan()
+	if err != nil {
+		fmt.Println("적절한 숫자가 아닙니다! 다시 입력하세요")
+	}
 
-	n := rand.Intn(100)
-	fmt.Println(n)
+	fmt.Println(answer, input)
 }
