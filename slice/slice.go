@@ -24,4 +24,7 @@ func main() {
 	// add index
 	fmt.Println("add index")
 	libs.AddIndex()
+	// slice sort
+	fmt.Println("slice sort")
+	libs.Sort()
 }
