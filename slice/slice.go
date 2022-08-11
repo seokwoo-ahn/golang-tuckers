@@ -18,4 +18,7 @@ func main() {
 	// replicate slice
 	fmt.Println("replicate slice")
 	libs.Replicate()
+	// delete index
+	fmt.Println("delete index")
+	libs.DeleteIndex()
 }
