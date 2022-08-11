@@ -12,4 +12,7 @@ func main() {
 	// slice append
 	fmt.Println("slice append")
 	libs.Append()
+	// slice append cf
+	fmt.Println("slice append cf")
+	libs.AppendCf()
 }
