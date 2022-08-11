@@ -21,4 +21,7 @@ func main() {
 	// delete index
 	fmt.Println("delete index")
 	libs.DeleteIndex()
+	// add index
+	fmt.Println("add index")
+	libs.AddIndex()
 }
