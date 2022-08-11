@@ -15,4 +15,7 @@ func main() {
 	// slice append cf
 	fmt.Println("slice append cf")
 	libs.AppendCf()
+	// replicate slice
+	fmt.Println("replicate slice")
+	libs.Replicate()
 }
