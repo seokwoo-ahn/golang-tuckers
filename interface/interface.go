@@ -18,4 +18,8 @@ func main() {
 	fmt.Println("interface convert")
 	str := &libs.Str{Name: "cranberry", Age: 12}
 	libs.PrintStr(str)
+	// interface convert to interface
+	fmt.Println("interface convert to interface")
+	file := &libs.File{}
+	libs.InterfaceConvert(file)
 }
