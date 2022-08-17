@@ -14,4 +14,8 @@ func main() {
 	fmt.Println("empty interface")
 	libs.EmptyInterface("hello")
 	libs.EmptyInterface(123)
+	// interface convert to concrete type
+	fmt.Println("interface convert")
+	str := &libs.Str{Name: "cranberry", Age: 12}
+	libs.PrintStr(str)
 }
