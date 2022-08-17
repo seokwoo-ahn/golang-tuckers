@@ -10,4 +10,7 @@ func main() {
 	fmt.Println("variable arguments")
 	libs.VariableArg(1, 3, 4)
 	libs.VariableArg(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+	// variable arguments with empty interface
+	fmt.Println("variable arguments with empty interface")
+	libs.VariableArgInterface(1, "hi", [2]int{1, 2})
 }
