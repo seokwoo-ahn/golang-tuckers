@@ -10,4 +10,8 @@ func main() {
 	student := libs.Student{Name: "cranberry", Age: 12}
 	var stringer libs.Stringer = student
 	fmt.Println(stringer.Declaration())
+	// empty interface
+	fmt.Println("empty interface")
+	libs.EmptyInterface("hello")
+	libs.EmptyInterface(123)
 }
