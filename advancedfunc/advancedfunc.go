@@ -16,4 +16,9 @@ func main() {
 	// defer
 	fmt.Println("defer")
 	libs.Defer()
+	// function variable
+	fmt.Println("function variable")
+	var operator func(int, int) int = libs.FunctionVariable("*")
+	var result = operator(3, 4)
+	fmt.Println(result)
 }
