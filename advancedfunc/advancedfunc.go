@@ -13,4 +13,7 @@ func main() {
 	// variable arguments with empty interface
 	fmt.Println("variable arguments with empty interface")
 	libs.VariableArgInterface(1, "hi", [2]int{1, 2})
+	// defer
+	fmt.Println("defer")
+	libs.Defer()
 }
