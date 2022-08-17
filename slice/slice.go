@@ -27,4 +27,7 @@ func main() {
 	// slice sort
 	fmt.Println("slice sort")
 	libs.Sort()
+	// struct slice sort
+	fmt.Println("struct slice sort")
+	libs.StructSort()
 }
