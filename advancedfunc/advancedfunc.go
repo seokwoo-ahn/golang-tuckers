@@ -21,4 +21,9 @@ func main() {
 	var operator func(int, int) int = libs.FunctionVariable("*")
 	var result = operator(3, 4)
 	fmt.Println(result)
+	// literal function
+	fmt.Println("literal function")
+	fn := libs.Literal("+")
+	result2 := fn(3, 4)
+	fmt.Println(result2)
 }
