@@ -26,4 +26,7 @@ func main() {
 	fn := libs.Literal("+")
 	result2 := fn(3, 4)
 	fmt.Println(result2)
+	// dependency injection
+	fmt.Println("dependency injection")
+	libs.DependencyInjection()
 }
