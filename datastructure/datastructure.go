@@ -16,4 +16,11 @@ func main() {
 		queue.Push(i)
 	}
 	fmt.Println(queue.Pop())
+	// stack
+	fmt.Println("stack")
+	stack := libs.NewStack()
+	for i := 1; i < 5; i++ {
+		stack.Push(i)
+	}
+	fmt.Println(stack.Pop())
 }
