@@ -23,4 +23,7 @@ func main() {
 		stack.Push(i)
 	}
 	fmt.Println(stack.Pop())
+	// ring
+	fmt.Println("ring")
+	libs.Ring()
 }
