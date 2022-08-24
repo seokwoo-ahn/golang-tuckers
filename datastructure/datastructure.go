@@ -29,4 +29,7 @@ func main() {
 	// map
 	fmt.Println("map")
 	libs.Map()
+	// map
+	fmt.Println("map range")
+	libs.MapRange()
 }
