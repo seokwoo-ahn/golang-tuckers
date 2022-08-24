@@ -29,7 +29,10 @@ func main() {
 	// map
 	fmt.Println("map")
 	libs.Map()
-	// map
+	// map range
 	fmt.Println("map range")
 	libs.MapRange()
+	// map delete & check
+	fmt.Println("map delete")
+	libs.MapDelete()
 }
