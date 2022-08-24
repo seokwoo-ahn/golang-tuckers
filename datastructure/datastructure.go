@@ -26,4 +26,7 @@ func main() {
 	// ring
 	fmt.Println("ring")
 	libs.Ring()
+	// map
+	fmt.Println("map")
+	libs.Map()
 }
