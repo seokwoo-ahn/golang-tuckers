@@ -15,4 +15,7 @@ func main() {
 	// error interface
 	fmt.Println("error interface")
 	libs.ErrorInterface("cranberry", "izone")
+	// error wrapping
+	fmt.Println("error wrapping")
+	libs.ErrorWrapping()
 }
