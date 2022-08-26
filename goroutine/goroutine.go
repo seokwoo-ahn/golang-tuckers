@@ -23,6 +23,9 @@ func main() {
 	// fmt.Println("concurrency with mutex")
 	// libs.Mutex()
 	// deadlock
-	fmt.Println("dead lock")
-	libs.DeadLock()
+	// fmt.Println("dead lock")
+	// libs.DeadLock()
+	// concurrency programming
+	fmt.Println("concurrency programming")
+	libs.ConcurrencyProgramming()
 }
