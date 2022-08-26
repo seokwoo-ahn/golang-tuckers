@@ -18,4 +18,7 @@ func main() {
 	// error wrapping
 	fmt.Println("error wrapping")
 	libs.ErrorWrapping()
+	// panic
+	fmt.Println("panic")
+	libs.PanicDivide(3, 2)
 }
