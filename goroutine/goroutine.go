@@ -16,4 +16,7 @@ func main() {
 		go libs.WaitGroup(1, 450555)
 	}
 	libs.Wg.Wait()
+	// concurrency issue
+	// fmt.Println("concurrency")
+	// libs.Concurrency()
 }
