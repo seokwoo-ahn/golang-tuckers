@@ -19,4 +19,7 @@ func main() {
 	// concurrency issue
 	// fmt.Println("concurrency")
 	// libs.Concurrency()
+	// concurrency with mutex
+	fmt.Println("concurrency with mutex")
+	libs.Mutex()
 }

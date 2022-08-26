@@ -20,7 +20,6 @@ func Concurrency() {
 			for {
 				DepositAndWithdraw(account)
 			}
-			wg.Done()
 		}()
 	}
 	wg.Wait()
