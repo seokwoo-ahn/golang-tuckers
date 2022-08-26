@@ -21,4 +21,8 @@ func main() {
 	// panic
 	fmt.Println("panic")
 	libs.PanicDivide(3, 2)
+	// panic recover
+	fmt.Println("panic recover")
+	libs.PanicRecover()
+	fmt.Println("panic recovered")
 }
