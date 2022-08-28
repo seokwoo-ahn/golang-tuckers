@@ -9,4 +9,7 @@ func main() {
 	// data channel
 	fmt.Println("channel gen")
 	libs.Data()
+	// channel size
+	fmt.Println("channel size")
+	libs.Size(10)
 }
