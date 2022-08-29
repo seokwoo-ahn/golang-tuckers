@@ -13,11 +13,19 @@ func main() {
 	}
 	word := os.Args[1]
 	files := os.Args[2:]
+	findInfos := []libs.FindInfo{}
+
 	fmt.Println("찾으려는 단어:", word)
-	libs.PrintAllFiles(files)
-	// libs.PrintFile("./text/hamlet.txt")
 	for _, path := range files {
-		fmt.Println(libs.FindWordInAllFiles(word, path))
+		findInfos = append(findInfos, libs.FindWordInAllFiles(word, path)...)
 	}
-	fmt.Println(libs.FindWordInFile(word, "./text/hamlet.txt"))
+	for _, findInfo := range findInfos {
+		fmt.Println("file name:", findInfo.Filename)
+		fmt.Println("-------------------------------")
+		for _, result := range findInfo.Result {
+			fmt.Println("LineNo:", result.LineNo, "\tcontent:", result.Line)
+		}
+		fmt.Println("-------------------------------")
+		fmt.Println()
+	}
 }

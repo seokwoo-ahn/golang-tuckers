@@ -8,13 +8,13 @@ import (
 )
 
 type Result struct {
-	lineNo int
-	line   string
+	LineNo int
+	Line   string
 }
 
 type FindInfo struct {
-	filename string
-	result   []Result
+	Filename string
+	Result   []Result
 }
 
 func FindWordInAllFiles(word, path string) []FindInfo {
@@ -44,9 +44,9 @@ func FindWordInFile(word, filename string) FindInfo {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.Contains(line, word) {
-			result = append(result, Result{lineNo: lineNo, line: line})
+			result = append(result, Result{LineNo: lineNo, Line: line})
 		}
 		lineNo++
 	}
-	return FindInfo{filename: filename, result: result}
+	return FindInfo{Filename: filename, Result: result}
 }
