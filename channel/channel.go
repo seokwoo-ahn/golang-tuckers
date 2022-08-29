@@ -12,4 +12,7 @@ func main() {
 	// channel size
 	fmt.Println("channel size")
 	libs.Size(10)
+	// channel wait
+	fmt.Println("channel wait")
+	libs.Wait()
 }
