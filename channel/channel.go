@@ -24,4 +24,7 @@ func main() {
 	// separate
 	fmt.Println("separate")
 	libs.Separate()
+	// context
+	fmt.Println("context")
+	libs.Context()
 }
