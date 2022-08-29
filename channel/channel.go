@@ -21,4 +21,7 @@ func main() {
 	// interval
 	fmt.Println("interval")
 	libs.Interval()
+	// separate
+	fmt.Println("separate")
+	libs.Separate()
 }
