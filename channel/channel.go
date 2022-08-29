@@ -13,6 +13,9 @@ func main() {
 	fmt.Println("channel size")
 	libs.Size(10)
 	// channel wait
-	fmt.Println("channel wait")
-	libs.Wait()
+	// fmt.Println("channel wait")
+	// libs.Wait()
+	// select
+	fmt.Println("select")
+	libs.Select()
 }
