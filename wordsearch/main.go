@@ -15,4 +15,5 @@ func main() {
 	files := os.Args[2:]
 	fmt.Println("찾으려는 단어:", word)
 	libs.PrintAllFiles(files)
+	libs.PrintFile("./text/hamlet.txt")
 }
