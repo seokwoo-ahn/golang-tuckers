@@ -15,5 +15,9 @@ func main() {
 	files := os.Args[2:]
 	fmt.Println("찾으려는 단어:", word)
 	libs.PrintAllFiles(files)
-	libs.PrintFile("./text/hamlet.txt")
+	// libs.PrintFile("./text/hamlet.txt")
+	for _, path := range files {
+		fmt.Println(libs.FindWordInAllFiles(word, path))
+	}
+	fmt.Println(libs.FindWordInFile(word, "./text/hamlet.txt"))
 }
