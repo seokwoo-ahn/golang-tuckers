@@ -24,29 +24,43 @@ func FindWordInAllFiles(word, path string) []FindInfo {
 		fmt.Println("해당 경로에 입력한 파일이 존재하지 않습니다 err:", err, "path:", path)
 		return findInfos
 	}
+	ch := make(chan FindInfo)
+	cnt := len(files)
+	recvCnt := 0
+
 	for _, v := range files {
-		findInfos = append(findInfos, FindWordInFile(word, v))
+		go FindWordInFile(word, v, ch)
+	}
+
+	for findInfo := range ch {
+		findInfos = append(findInfos, findInfo)
+		recvCnt++
+		if recvCnt == cnt {
+			break
+		}
 	}
 	return findInfos
 }
 
-func FindWordInFile(word, filename string) FindInfo {
+func FindWordInFile(word, filename string, ch chan FindInfo) {
+	findInfo := FindInfo{filename, []Result{}}
 	file, err := os.Open(filename)
 	if err != nil {
 		fmt.Println("파일을 찾을 수 없습니다.", filename)
+		ch <- findInfo
+		return
 	}
 	defer file.Close()
 
-	result := []Result{}
 	lineNo := 1
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.Contains(line, word) {
-			result = append(result, Result{LineNo: lineNo, Line: line})
+			findInfo.Result = append(findInfo.Result, Result{LineNo: lineNo, Line: line})
 		}
 		lineNo++
 	}
-	return FindInfo{Filename: filename, Result: result}
+	ch <- findInfo
 }
