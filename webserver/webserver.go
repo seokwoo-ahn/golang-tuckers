@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/bar", libs.BarHandler)
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/bar", libs.BarHandler)
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello World")
 	})
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3000", mux)
 }
