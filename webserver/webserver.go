@@ -12,5 +12,6 @@ func main() {
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello World")
 	})
+	mux.HandleFunc("/json", libs.JsonHandler)
 	http.ListenAndServe(":3000", mux)
 }
