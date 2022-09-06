@@ -18,6 +18,7 @@ func WebHandler() http.Handler {
 	StudentsMap[2] = Student{2, "ralo", 29, 2400}
 
 	mux.HandleFunc("/students/{id:[0-9]+}", GetStudentHandler).Methods("GET")
+	mux.HandleFunc("/students", PostStudentHandler).Methods("POST")
 
 	return mux
 }
@@ -44,4 +45,17 @@ func GetStudentHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(student)
+}
+
+func PostStudentHandler(w http.ResponseWriter, r *http.Request) {
+	var student Student
+	err := json.NewDecoder(r.Body).Decode(&student)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+	LastId++
+	student.Id = LastId
+	StudentsMap[LastId] = student
+	w.WriteHeader(http.StatusCreated)
 }
