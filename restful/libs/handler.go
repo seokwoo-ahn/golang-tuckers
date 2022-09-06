@@ -10,13 +10,13 @@ import (
 )
 
 func WebHandler() http.Handler {
-	mux := mux.NewRouter()
-	mux.HandleFunc("/students", StudentListHandler).Methods("GET")
-
 	StudentsMap = make(map[int]Student)
 	StudentsMap[1] = Student{1, "cranberry", 2, 100}
+	LastId++
 	StudentsMap[2] = Student{2, "ralo", 29, 2400}
-
+	LastId++
+	mux := mux.NewRouter()
+	mux.HandleFunc("/students", StudentListHandler).Methods("GET")
 	mux.HandleFunc("/students/{id:[0-9]+}", GetStudentHandler).Methods("GET")
 	mux.HandleFunc("/students", PostStudentHandler).Methods("POST")
 
