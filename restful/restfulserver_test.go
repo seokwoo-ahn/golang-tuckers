@@ -70,3 +70,25 @@ func TestJsonHandler3(t *testing.T) {
 	assert.Nil(err)
 	assert.Equal("chaewon", student.Name)
 }
+
+func TestJsonHandler4(t *testing.T) {
+	assert := assert.New(t)
+
+	mux := libs.WebHandler()
+	res := httptest.NewRecorder()
+	req := httptest.NewRequest("DELETE", "/students/1", nil)
+
+	mux.ServeHTTP(res, req)
+	assert.Equal(http.StatusOK, res.Code)
+
+	res = httptest.NewRecorder()
+	req = httptest.NewRequest("GET", "/students", nil)
+	mux.ServeHTTP(res, req)
+
+	assert.Equal(http.StatusOK, res.Code)
+	var list []libs.Student
+	err := json.NewDecoder(res.Body).Decode(&list)
+	assert.Nil(err)
+	assert.Equal(1, len(list))
+	assert.Equal("ralo", list[0].Name)
+}
