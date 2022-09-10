@@ -1,15 +1,15 @@
 package todostruct
 
 type Todo struct {
-	ID        int    `json:"id,omitempty"`
-	Name      string `json:"name"`
-	Completed bool   `json:"completed,omitempty"`
+	ID        int    `json:"ID,omitempty"`
+	Name      string `json:"Name"`
+	Completed bool   `json:"Completed,omitempty"`
 }
 
 type Todos []Todo
 
 type Success struct {
-	Success bool `json:"success"`
+	Success bool `json:"Success"`
 }
 
 var TodoMap map[int]Todo

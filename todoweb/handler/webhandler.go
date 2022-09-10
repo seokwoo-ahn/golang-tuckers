@@ -13,7 +13,7 @@ import (
 	"github.com/unrolled/render"
 )
 
-var RD *render.Render
+var RD *render.Render = render.New()
 
 func WebHandler() http.Handler {
 	todo.TodoMap = make(map[int]todo.Todo)
@@ -43,8 +43,9 @@ func PostTodoHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	todo.LastId++
+	newTodo.ID = todo.LastId
 	todo.TodoMap[todo.LastId] = newTodo
+	todo.LastId++
 	RD.JSON(w, http.StatusCreated, newTodo)
 }
 
@@ -70,9 +71,9 @@ func UpdateTodoHandler(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
-	if outdated, ok := todo.TodoMap[id]; ok {
-		outdated.Name = newTodo.Name
-		outdated.Completed = newTodo.Completed
+	if _, ok := todo.TodoMap[id]; ok {
+		newTodo.ID = id
+		todo.TodoMap[id] = newTodo
 		RD.JSON(w, http.StatusOK, todo.Success{Success: true})
 	} else {
 		RD.JSON(w, http.StatusBadRequest, todo.Success{Success: false})
