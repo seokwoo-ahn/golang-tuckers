@@ -58,3 +58,27 @@ func TestUpdateHandler(t *testing.T) {
 	assert.Equal(todoMap[0].ID, 0)
 	assert.Equal(todoMap[0].Completed, false)
 }
+
+func TestRemoveHandler(t *testing.T) {
+	assert := assert.New(t)
+	mux := handler.WebHandler()
+	todoMap := make(todostruct.Todos, 0)
+
+	res := httptest.NewRecorder()
+	req := httptest.NewRequest("POST", "/todos", strings.NewReader(`{"Name":"musthave"}`))
+	mux.ServeHTTP(res, req)
+	assert.Equal(http.StatusCreated, res.Code)
+
+	res = httptest.NewRecorder()
+	req = httptest.NewRequest("DELETE", "/todos/0", nil)
+	mux.ServeHTTP(res, req)
+	assert.Equal(http.StatusOK, res.Code)
+
+	res = httptest.NewRecorder()
+	req = httptest.NewRequest("GET", "/todos", nil)
+	mux.ServeHTTP(res, req)
+	assert.Equal(http.StatusOK, res.Code)
+	err := json.NewDecoder(res.Body).Decode(&todoMap)
+	assert.Nil(err)
+	assert.Equal(todoMap, todostruct.Todos{})
+}
